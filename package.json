@@ -1,5 +1,5 @@
 {
-  "name": "relay_modern",
+  "name": "relay-modern",
   "version": "1.0.0",
   "description": "relay",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/laurelherting/relay_modern.git"
+    "url": "https://github.com/laurelherting/relay-modern.git"
   },
   "author": "Laurel Herting <laurel.herting@gmail.com>",
   "license": "MIT",
