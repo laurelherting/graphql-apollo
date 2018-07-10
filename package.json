@@ -15,6 +15,6 @@
   "private": null,
   "dependencies": {
     "minimist": "^1.2.0",
-    "mongoose": "^5.2.2"
+    "mongoose": "4.10.8"
   }
 }
