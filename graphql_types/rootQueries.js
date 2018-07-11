@@ -8,9 +8,12 @@ const RootQueryType = new GraphQLObjectType ({
   name: 'RootQuery',
   fields: () => ({
     users: {
-      type: new GraphQLList(UserType)
+      type: new GraphQLList(UserType),
+      resolve() {
+        return UserModel.find({});
+      }
     }
   })
-})
+});
 
-
+module.exports = RootQueryType;
