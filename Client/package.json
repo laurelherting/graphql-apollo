@@ -1,0 +1,14 @@
+{
+  "name": "Client",
+  "version": "1.0.0",
+  "description": "relay client side",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "3.5.5"
+  }
+}
