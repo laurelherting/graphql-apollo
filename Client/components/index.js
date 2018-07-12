@@ -1,10 +1,10 @@
 const ReactDOM = require('react-dom');
 const React = require('react');
 
-const Start = require('./Start');
+const App = require('./App');
 
 ReactDOM.render(
-  <Start name="User Name" />,
+  <App />,
   document.getElementById('root')
 );
 
