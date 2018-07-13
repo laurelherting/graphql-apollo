@@ -29,7 +29,7 @@ const RootQueryType = new GraphQLObjectType ({
       args: {
         id: { type: GraphQLID },
         name: { type: GraphQLString }
-        },
+      },
       resolve(parent, args) {
         return args;
       }
