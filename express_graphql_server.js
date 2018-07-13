@@ -14,6 +14,6 @@ app.use('/graphql', expressGraphQL ({
 }));
 
 app.listen(4000, () => {
-  console.log('Running a CORS-enabled GraphQL API server at localhost:4000/graphql'),
+// console.log('Running a CORS-enabled GraphQL API server at localhost:4000/graphql'),
 });
 
