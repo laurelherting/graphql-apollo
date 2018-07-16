@@ -16,4 +16,5 @@ UserSchema.statistics = function(userID, newName) {
 }
 
 const User = mongoose.model('user', UserSchema);
+
 module.exports = User;
