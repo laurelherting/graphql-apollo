@@ -4,7 +4,7 @@ const { GraphQLObjectType, GraphQLList, GraphQLID, GraphQLString } = graphql;
 const UserType = require('./user_type');
 const UserModel = require('../mongoose_models/user');
 
-const ViewerType = new GraphQLObjectList({
+const ViewerType = new GraphQLObjectType({
   name: 'Viewer',
   fields: () => ({
     user: {
