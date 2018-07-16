@@ -9,8 +9,9 @@ const ViewerType = new GraphQLObjectList ({
   fields: () => ({
     user: {
       type: UserType,
-      resolve(args)
+      resolve(args) {
         return UserModel.findOne(args);
+      }
     }
   })
 });
