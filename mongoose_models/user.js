@@ -5,7 +5,7 @@ const UserSchema = new Schema({
   name: { type: String }
 });
 
-UserSchema.statistics.changeName = function(userID, newName) {
+UserSchema.statistics = function(userID, newName) {
   const User = mongoose.model('user');
 
   return User.findById(userId)
