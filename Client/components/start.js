@@ -15,15 +15,5 @@ class Start extends React.Component {
   }
 }
 
-module.exports = createFragmentContainer(
-  Start,
-  graphql`
-  fragment Start_userToGreet on Viewer {
-    user {
-      name
-      id
-    }
-  }
-  `
-);
+module.exports = Start;
 
