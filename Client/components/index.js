@@ -1,32 +1,19 @@
-const ReactDOM = require('react-dom');
-const React = require('react');
-const { QueryRenderer, graphql } = require('react-relay');
-const environment = require('./environment');
+import ReactDOM from 'react-dom';
+import React from 'react';
 
-const App = require('./App');
+import {
+  QueryRenderer,
+  graphql
+} from 'react-relay';
 
-function RootComponent() {
-  const rootQuery = graphql`
-    query reactComponentsRootQuery {
-      random_label2: myuser(name: "Becky") {
-        ...App_appUser
-      }
-    }
-  `;
+import environment from './environment';
+import App from './App';
 
-  function onRenderHelper({ err, props }) {
-    if (err) {
-      return <div>{err.message}</div>;
-    } else if (props) {
-      return <App appUser={props.random_label2} />;
-    } else {
-      return <div>Loading...</div>;
-    }
-  }
+const RootComponent = () => {
 
-  return <QueryRenderer environment={environment} query={rootQuery} render={onRenderHelper} />;
+ return;
 
-}
+};
 
 ReactDOM.render(
   <RootComponent />,
