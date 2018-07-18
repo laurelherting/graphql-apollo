@@ -1,6 +1,6 @@
-const React = require('react');
+import React from 'react';
 
-function Card(props) {
+const Card = (props) => {
   const cardStyle = {
     height: 145,
     width: 245,
@@ -11,8 +11,8 @@ function Card(props) {
     filter: "drop-shadow(0px 0px 5px #757575)"
   };
 
-  return <div style={cardStyle}></div>
-}
+  return <div style={cardStyle}></div>;
+};
 
 module.exports = Card;
 

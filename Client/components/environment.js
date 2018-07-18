@@ -10,12 +10,12 @@ import {
 
 // Define a function that fetches the results of an operation (query/mutation/etc)
 // and returns its results as a Promise:
-function fetchQuery(
+const fetchQuery = (
   operation,
   variables,
   cacheConfig,
   uploadables,
-) {
+) => {
   return fetch('http:localhost:4000/graphql', {
     method: 'POST',
     headers: {
@@ -29,7 +29,7 @@ function fetchQuery(
   }).then(response => {
     return response.json();
   });
-}
+};
 
 // Create a network layer from the fetch function
 const network = Network.create(fetchQuery);

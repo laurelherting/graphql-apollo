@@ -1,8 +1,8 @@
-const React = require('react');
-const { graphql, createFragmentContainer } = require('react-relay');
+import React from 'react';
+import { graphql, createFragmentContainer } from 'react-relay';
 
-const Start = require('./Start');
-const Card = require('./Card');
+import Start from './Start';
+import Card from './Card';
 
 class App extends React.Component {
   render () {
@@ -21,6 +21,5 @@ module.exports = createFragmentContainer( App, {
       ...Start_userToGreet
     }
   `
-}
-);
+});
 
