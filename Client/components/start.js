@@ -1,5 +1,5 @@
-const React = require('react');
-const { graphql, createFragmentContainer } = require('react-relay');
+import React from 'react';
+import { graphql, createFragmentContainer } from 'react-relay';
 
 class Start extends React.Component {
   render () {
