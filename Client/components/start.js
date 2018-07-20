@@ -15,5 +15,5 @@ class Start extends React.Component {
   }
 }
 
-module.exports = Start;
+export default Start;
 

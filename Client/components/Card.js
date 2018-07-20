@@ -14,5 +14,5 @@ const Card = (props) => {
   return <div style={cardStyle}></div>;
 };
 
-module.exports = Card;
+export default Card;
 

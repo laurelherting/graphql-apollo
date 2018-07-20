@@ -27,4 +27,4 @@ class RendererHelper extends React.Component {
   }
 }
 
-module.exports = RenderHelper;
+export default RenderHelper;

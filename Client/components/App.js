@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 }
 
-module.exports = createFragmentContainer( App, {
+export default createFragmentContainer( App, {
   appUser: graphql`
     fragment App_appUser on Viewer {
       ...Start_userToGreet
