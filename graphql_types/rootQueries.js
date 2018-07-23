@@ -19,9 +19,15 @@ const ViewerType = new GraphQLObjectType({
 const RootQueryType = new GraphQLObjectType({
   name: 'RootQuery',
   fields: () => ({
-    user(id: "1234") {
-      id
-      name
+    user: {
+      type: UserType,
+      args: {
+        id: { type: GraphQLID },
+        name: { type: GraphQLString }
+      },
+      resolve(parent, args) {
+        return args;
+      }
     },
     users: {
       type: new GraphQLList(UserType),
