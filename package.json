@@ -18,6 +18,7 @@
     "cors": "2.8.4",
     "express": "^4.16.3",
     "express-graphql": "^0.6.12",
+    "graphiql": "^0.11.11",
     "graphql": "^0.13.2",
     "minimist": "^1.2.0",
     "mongoose": "4.10.8"
