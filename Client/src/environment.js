@@ -16,7 +16,7 @@ const fetchQuery = (
   cacheConfig,
   uploadables,
 ) => {
-  return fetch('http:localhost:4000/graphql', {
+  return fetch('http://localhost:4000/graphql', {
     method: 'POST',
     headers: {
       // Add authentication and other headers here

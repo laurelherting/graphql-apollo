@@ -1,24 +1,33 @@
-import path from 'path';
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-const config = () => {
-  entry: './components/index.js',
-    output: {
-    path: path.resolve(__dirname, 'build'),
-      filename: 'bundle.js'
-    },
-    module: {
-      rules: [
-        {
-        use: 'babel-loader',
-          test: /\.js$/,
-          exclude: [
-            path.resolve(__dirname, "./node_modules"),
-            path.resolve(__dirname, "./build")
-          ]
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env', 'react'],
+            plugins: ['relay', 'syntax-jsx' , 'transform-react-jsx'],
+          }
         }
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: "html-loader"
+          }
         ]
-    }
+      }
+    ]
+  },
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: "./src/index.html",
+      filename: "./index.html"
+    })
+  ]
 };
-
-module.exports = config;
-

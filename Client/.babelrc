@@ -1,9 +1,0 @@
-{
-  "presets": ["es2015"],
-  "plugins": [
-    "relay",
-    "syntax-jsx",
-    "transform-react-jsx"
-  ]
-}
-
