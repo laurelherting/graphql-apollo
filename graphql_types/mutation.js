@@ -5,13 +5,11 @@ const mongoose = require('mongoose');
 const User = require('../mongoose_models/user');
 const UserType = require('./user_type.js');
 
-const mutations = new GraphQLObjectType({
-  name: 'Mutations',
-  description: 'These are things we can change',
+const mutation = new GraphQLObjectType({
+  name: 'Mutation',
   fields: () => ({
     changeUserName: {
       type: UserType,
-      description: 'Change a user with id and return the newName.',
       args: {
         newName: { type: GraphQLString },
         userId: { type: GraphQLID }
@@ -23,5 +21,5 @@ const mutations = new GraphQLObjectType({
   }),
 });
 
-module.exports = mutations;
+module.exports = mutation;
 
