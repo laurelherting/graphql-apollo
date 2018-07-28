@@ -3,7 +3,7 @@ schema {
   mutation: Mutations
 }
 
-type Mutations {
+type Mutation {
   changeUserName(newName: String!, userId: ID!): User
 }
 
