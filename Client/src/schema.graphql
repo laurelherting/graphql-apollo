@@ -1,6 +1,6 @@
 schema {
   query: RootQuery
-  mutation: Mutations
+  mutation: Mutation
 }
 
 type Mutation {
