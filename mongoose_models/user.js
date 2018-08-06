@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const UserSchema = new Schema({
-  name: { type: String }
+const UserSchema = new mongoose.Schema({
+  name: String
 });
 
 UserSchema.statistics = function(userID, newName) {
