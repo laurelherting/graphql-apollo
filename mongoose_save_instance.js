@@ -1,6 +1,6 @@
 const db = require('./mongoDB_connection');
 
-const User = require('./mongoose_models/user');
+const User = require('./server/mongoose_models/user');
 const player = new User({
   name: "player"
 });
