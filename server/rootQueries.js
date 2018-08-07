@@ -10,7 +10,8 @@ const ViewerType = new GraphQLObjectType({
     user: {
       type: UserType,
       resolve(args) {
-        return UserModel.findOne(args);
+      // code to get data from db / other source
+      // return UserModel.findOne(args);
       }
     }
   })
@@ -26,13 +27,13 @@ const RootQueryType = new GraphQLObjectType({
         name: { type: GraphQLString }
       },
       resolve(parent, args) {
-        return UserModel.findOne({ _id: args.id });
+      // return UserModel.findOne({ _id: args.id });
       }
     },
     users: {
       type: new GraphQLList(UserType),
       resolve() {
-        return UserModel.find({});
+      // return UserModel.find({});
       }
     },
     myuser: {
@@ -42,7 +43,7 @@ const RootQueryType = new GraphQLObjectType({
         name: { type: GraphQLString }
       },
       resolve(parent, args) {
-        return args;
+      // return args;
       }
     }
   })
