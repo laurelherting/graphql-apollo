@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const expressGraphQL = require('express-graphql');
-const schema = require('./graphql_types/graphql_schema');
+const schema = require('./server/graphql_schema');
 const db = require('./mongoDB_connection');
 
 const app = express();
