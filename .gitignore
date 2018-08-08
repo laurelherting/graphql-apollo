@@ -1,7 +1,14 @@
-node_modules
-### Node ###
 # Logs
 logs
 *.log
 yarn-debug.log*
 yarn-error.log*
+
+# Dependency directories
+node_modules
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
