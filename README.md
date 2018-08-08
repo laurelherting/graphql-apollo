@@ -14,14 +14,19 @@ From the root project folder, run `yarn`
 - Open up a tab in the terminal. From the root project folder, run: `yarn start`
 
 ### Client: Install
-From the `Client` folder, run `yarn`
+From the `Client` folder, run: `yarn`
 
 ### Client: Running the project
 #### Relay and webpack-dev-server will be run in watch mode
 Open up a tab in the terminal. From the `Client` project folder, run: `yarn start`
 
 ## Express-GraphQL Notes
-The GraphQL schema docs are located in `server`
+The GraphQL schema docs are located in: `server`
+
+## GraphiQL Notes
+- Open up a tab in the terminal and start MongoDB
+- Open up a tab in the terminal. From the root project folder, run: `yarn start`
+An in-browser IDE for writing, validating, and testing queries
 
 ## Relay Notes
 [Getting started doc]:(https://facebook.github.io/relay/docs/en/query-renderer.html)
