@@ -21,6 +21,7 @@
     "graphql": "^0.13.2",
     "minimist": "^1.2.0",
     "mongoose": "4.10.8",
+    "nodemon": "^1.18.3",
     "prettier": "^1.13.7"
   }
 }
