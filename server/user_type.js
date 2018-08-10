@@ -2,12 +2,12 @@ const mongoose = require('mongoose');
 const graphql = require('graphql');
 const { GraphQLObjectType, GraphQLID, GraphQLString } = graphql;
 
-const UserType = new GraphQLObjectType({
-  name: "User",
+const BookType = new GraphQLObjectType({
+  name: 'Book',
   fields: () => ({
-    id: { type: GraphQLID },
+    id: { type: GraphQLString },
     name: { type: GraphQLString },
   })
 });
 
-module.exports = UserType;
+module.exports = BookType;
