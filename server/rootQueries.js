@@ -1,14 +1,14 @@
 const graphql = require('graphql');
 const { GraphQLObjectType, GraphQLList, GraphQLID, GraphQLString } = graphql;
 
-const UserType = require('./user_type');
+const BookType = require('./schema');
 const UserModel = require('../server/models/user');
 
 const ViewerType = new GraphQLObjectType({
   name: 'Viewer',
   fields: () => ({
     user: {
-      type: UserType,
+      type: BookType,
       resolve(args) {
       // code to get data from db / other source
       // return UserModel.findOne(args);
@@ -21,7 +21,7 @@ const RootQueryType = new GraphQLObjectType({
   name: 'RootQuery',
   fields: () => ({
     user: {
-      type: UserType,
+      type: BookType,
       args: {
         id: { type: GraphQLID },
         name: { type: GraphQLString }
@@ -31,7 +31,7 @@ const RootQueryType = new GraphQLObjectType({
       }
     },
     users: {
-      type: new GraphQLList(UserType),
+      type: new GraphQLList(BookType),
       resolve() {
       // return UserModel.find({});
       }

@@ -3,16 +3,15 @@ const { GraphQLObjectType, GraphQLString, GraphQLID } = graphql;
 const mongoose = require('mongoose');
 
 const User = require('../server/mongoose_models/user');
-const UserType = require('./user_type.js');
+const BookType = require('./schema.js');
 
 const mutation = new GraphQLObjectType({
   name: 'Mutation',
   fields: () => ({
     changeUserName: {
-      type: UserType,
+      type: BookType,
       args: {
         newName: { type: GraphQLString },
-        userId: { type: GraphQLID }
       },
       resolve: (parentValue, { newName, userId }) => {
         return User.changeName(userId, newName);
