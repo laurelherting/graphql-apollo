@@ -1,5 +1,5 @@
 const graphql = require('graphql');
-const { GraphQLObjectType, GraphQLList, GraphQLID, GraphQLString } = graphql;
+const { GraphQLObjectType, GraphQLSchema, GraphQLString } = graphql;
 
 const BookType = require('./schema');
 const UserModel = require('../server/models/user');
@@ -7,7 +7,7 @@ const UserModel = require('../server/models/user');
 const ViewerType = new GraphQLObjectType({
   name: 'Viewer',
   fields: () => ({
-    user: {
+    book: {
       type: BookType,
       resolve(args) {
       // code to get data from db / other source
@@ -18,35 +18,17 @@ const ViewerType = new GraphQLObjectType({
 });
 
 const RootQueryType = new GraphQLObjectType({
-  name: 'RootQuery',
+  name: 'RootQueryType',
   fields: () => ({
-    user: {
+    book: {
       type: BookType,
-      args: {
-        id: { type: GraphQLID },
-        name: { type: GraphQLString }
-      },
+      args: { id: { type: GraphQLString }},
       resolve(parent, args) {
-      // return UserModel.findOne({ _id: args.id });
       }
     },
-    users: {
-      type: new GraphQLList(BookType),
-      resolve() {
-      // return UserModel.find({});
-      }
-    },
-    myuser: {
-      type: ViewerType,
-      args: {
-        id: { type: GraphQLID },
-        name: { type: GraphQLString }
-      },
-      resolve(parent, args) {
-      // return args;
-      }
-    }
   })
 });
 
-module.exports = RootQueryType;
+module.exports = new GraphQLSchema({
+  query: RootQuery
+})
