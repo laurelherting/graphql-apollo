@@ -2,7 +2,7 @@ const graphql = require('graphql');
 const { GraphQLObjectType, GraphQLString, GraphQLID } = graphql;
 const mongoose = require('mongoose');
 
-const User = require('../server/mongoose_models/user');
+const Book = require('../server/models/book');
 const BookType = require('./schema.js');
 
 const mutation = new GraphQLObjectType({
