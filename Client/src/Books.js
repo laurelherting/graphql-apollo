@@ -4,14 +4,14 @@ import { QueryRenderer, graphql } from 'react-relay';
 import environment from './environment';
 import App from './App';
 
-class Users extends React.Component {
+class Books extends React.Component {
   render() {
     return (
       <QueryRenderer
         environment={environment}
         query={graphql`
-          query UsersQuery {
-            users {
+          query BooksQuery {
+            books {
               id
               name
             }
@@ -23,7 +23,7 @@ class Users extends React.Component {
           } else if (props) {
             return (
               <div>
-                {props.users.map(u => (
+                {props.books.map(u => (
                     <p key={u.id}>{u.id} {u.name}</p>
                 ))}
               </div>
@@ -36,4 +36,4 @@ class Users extends React.Component {
   }
 }
 
-export default Users;
+export default Books;
