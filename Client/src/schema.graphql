@@ -4,19 +4,19 @@ schema {
 }
 
 type Mutation {
-  changeUserName(newName: String!, userId: ID!): User
+  changeBookName(newName: String!, bookId: ID!): Book
 }
 
 type RootQuery {
-  users: [User]
-  myuser(userId: ID!, name: String): Viewer
+  books: [Book]
+  mybook(bookId: ID!, name: String): Viewer
 }
 
-type User {
+type Book {
   id: ID
   name: String
 }
 
 type Viewer {
-  user: User
+  book: Book
 }
