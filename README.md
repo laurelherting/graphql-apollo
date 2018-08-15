@@ -41,7 +41,7 @@ namespace such as:
 ```
 query={graphql`
   query srcindexQuery {
-    users {
+    books {
       id
       name
     }
@@ -50,11 +50,11 @@ query={graphql`
 ```
 
 Create separate files for each QueryRenderer call and use the filename as the
-namespace. Example: `Client/src/Users.js`
+namespace. Example: `Client/src/Books.js`
 ```
 query={graphql`
-  query UsersQuery {
-    users {
+  query BooksQuery {
+    books {
       id
       name
     }
