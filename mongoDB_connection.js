@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const MONGO_URI = 'mongodb://lad:12ddyy94@ds231991.mlab.com:31991/relay_work';
+const MONGO_URI = 'mongodb://author:12ddyy94@ds231991.mlab.com:31991/relay_work';
 
 mongoose.Promise = global.Promise;
 mongoose.connect(MONGO_URI, { useMongoClient: true });
