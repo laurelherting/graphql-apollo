@@ -1,13 +1,13 @@
 const db = require('./mongoDB_connection');
 
-const User = require('./server/mongoose_models/user');
-const player = new User({
-  name: "player"
+const Book = require('./server/models/book');
+const author = new Book({
+  name: "author"
 });
 
-player.save()
-  .then( (user) => {
-    console.log(user);
+author.save()
+  .then( (book) => {
+    console.log(book);
   });
 
 db.connection.close();
