@@ -6,7 +6,8 @@ const {
   GraphQLObjectType,
   GraphQLString,
   GraphQLSchema,
-  GraphQLID
+  GraphQLID,
+  GraphQLInt
 } = graphql;
 
 // sample data
@@ -19,6 +20,15 @@ const books = [
   { name: 'Enders Game', genre: 'fantasy', id: '6' }
 ];
 
+const authors = [
+  { name: 'Stephen King', age: '70', id: '6' },
+  { name: 'Marion Bradley', age: '69', id: '6' },
+  { name: 'Dennis McKiernan', age: '86', id: '6' },
+  { name: 'Donita Paul', age: '67', id: '6' },
+  { name: 'Isaac Asimov', age: '72', id: '6' },
+  { name: 'Orson Card', age: '67', id: '6' }
+];
+
 const BookType = new GraphQLObjectType({
     name: 'Book',
     fields: ( ) => ({
@@ -28,19 +38,35 @@ const BookType = new GraphQLObjectType({
     })
 });
 
+const AuthorType = new GraphQLObjectType({
+    name: 'Author',
+    fields: ( ) => ({
+        id: { type: GraphQLID },
+        name: { type: GraphQLString },
+        age: { type: GraphQLInt }
+    })
+});
+
 const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
     fields: {
-        book: {
-            type: BookType,
-            args: { id: { type: GraphQLID } },
-            resolve(parent, args){
-                // code to get data from db / other source
-                return _.find(books, { id: args.id });
-            }
+      book: {
+        type: BookType,
+        args: { id: { type: GraphQLID } },
+        resolve(parent, args){
+          // code to get data from db / other source
+          return _.find(books, { id: args.id });
         }
+      },
+      author: {
+        type: AuthorType,
+        args: { id: { type: GraphQLID } },
+        resolve(parent, args){
+          return _.find(authors, { id: args.id });
+        }
+      }
     }
-});
+  });
 
 module.exports = new GraphQLSchema({
     query: RootQuery
