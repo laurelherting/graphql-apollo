@@ -31,10 +31,17 @@ const authors = [
 
 const BookType = new GraphQLObjectType({
     name: 'Book',
-    fields: ( ) => ({
+    fields: () => ({
       id: { type: GraphQLID },
       name: { type: GraphQLString },
-      genre: { type: GraphQLString }
+      genre: { type: GraphQLString },
+      author: {
+        type: AuthorType,
+        resolve(parent, args) {
+          console.log(parent);
+          return _.find(authors, { id: parent.authorId });
+        }
+      }
     })
 });
 
