@@ -17,16 +17,16 @@ const books = [
   { name: 'Tales of Mithgar', genre: 'fantasy', id: '3' },
   { name: 'Dragon Quest', genre: 'fantasy', id: '4' },
   { name: 'Foundation & Earth', genre: 'fantasy', id: '5' },
-  { name: 'Enders Game', genre: 'fantasy', id: '6' }
+  { name: 'Enders Game', genre: 'fantasy', id: '6' },
 ];
 
 const authors = [
-  { name: 'Stephen King', age: '70', id: '6' },
-  { name: 'Marion Bradley', age: '69', id: '6' },
-  { name: 'Dennis McKiernan', age: '86', id: '6' },
-  { name: 'Donita Paul', age: '67', id: '6' },
-  { name: 'Isaac Asimov', age: '72', id: '6' },
-  { name: 'Orson Card', age: '67', id: '6' }
+  { name: 'Stephen King', age: '70', id: '1' },
+  { name: 'Marion Bradley', age: '69', id: '2' },
+  { name: 'Dennis McKiernan', age: '86', id: '3' },
+  { name: 'Donita Paul', age: '67', id: '4' },
+  { name: 'Isaac Asimov', age: '72', id: '5' },
+  { name: 'Orson Card', age: '67', id: '6' },
 ];
 
 const BookType = new GraphQLObjectType({
