@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const expressGraphQL = require('express-graphql');
+const graphqlHTTP = require('express-graphql');
 const schema = require('./server/schema/schema');
 const db = require('./mongoDB_connection');
 
@@ -9,9 +9,9 @@ const port = 4000;
 
 app.use(cors());
 
-app.use('/graphql', expressGraphQL ({
-  schema: schema,
-  graphql: true
+app.use('/graphql', graphqlHTTP({
+  schema,
+  graphiql: true
 }));
 
 app.listen(port, () =>
