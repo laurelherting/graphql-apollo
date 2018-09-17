@@ -13,12 +13,12 @@ const {
 
 // sample data
 const books = [
-  { name: 'Dark Tower', genre: 'fantasy', id: '1' },
-  { name: 'The Forbidden Tower', genre: 'fantasy', id: '2' },
-  { name: 'Tales of Mithgar', genre: 'fantasy', id: '3' },
-  { name: 'Dragon Quest', genre: 'fantasy', id: '4' },
-  { name: 'Foundation & Earth', genre: 'fantasy', id: '5' },
-  { name: 'Enders Game', genre: 'fantasy', id: '6' },
+  { name: 'Dark Tower', genre: 'fantasy', id: '1', authorId: '1' },
+  { name: 'The Forbidden Tower', genre: 'fantasy', id: '2', authorId: '2' },
+  { name: 'Tales of Mithgar', genre: 'fantasy', id: '3', authorId: '3' },
+  { name: 'Dragon Quest', genre: 'fantasy', id: '4', authorId: '4' },
+  { name: 'Foundation & Earth', genre: 'fantasy', id: '5', authorId: '5' },
+  { name: 'Enders Game', genre: 'fantasy', id: '6', authorId: '6' },
 ];
 
 const authors = [
