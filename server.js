@@ -2,10 +2,12 @@ const express = require('express');
 const cors = require('cors');
 const graphqlHTTP = require('express-graphql');
 const schema = require('./server/schema/schema');
-const db = require('./mongoDB_connection');
+const mongoose = require('mongoose');
 
 const app = express();
 const port = 4000;
+
+mongoose.connect('mongodb://author:12ddyy94@ds231991.mlab.com:31991/relay_work');
 
 app.use(cors());
 
