@@ -8,6 +8,9 @@ const app = express();
 const port = 4000;
 
 mongoose.connect('mongodb://author:12ddyy94@ds231991.mlab.com:31991/relay_work');
+mongoose.connection.once('open', () => {
+    console.log('connected to database');
+});
 
 app.use(cors());
 
