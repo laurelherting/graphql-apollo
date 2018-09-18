@@ -1,11 +1,13 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const BookSchema = new Schema({
-  name: String
+const bookSchema = new Schema({
+  name: String,
+  genre: String,
+  authorId: String
 });
 
-BookSchema.statistics = function(bookID, newName) {
+bookSchema.statistics = function(bookID, newName) {
   const Book = mongoose.model('book');
 
   return Book.findById(bookId)
@@ -15,4 +17,4 @@ BookSchema.statistics = function(bookID, newName) {
     })
 }
 
-module.exports = mongoose.model('Book', BookSchema);
+module.exports = mongoose.model('Book', bookSchema);
