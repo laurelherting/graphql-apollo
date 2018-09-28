@@ -1,7 +1,7 @@
 {
-  "name": "relay-modern",
+  "name": "graphl-apollo",
   "version": "1.0.0",
-  "description": "relay",
+  "description": "apollo",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/laurelherting/relay-modern.git"
+    "url": "https://github.com/laurelherting/graphql-apollo.git"
   },
   "author": "Laurel Herting <laurel.herting@gmail.com>",
   "license": "MIT",
