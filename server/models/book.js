@@ -7,14 +7,4 @@ const bookSchema = new Schema({
   authorId: String
 });
 
-bookSchema.statistics = function(bookID, newName) {
-  const Book = mongoose.model('book');
-
-  return Book.findById(bookId)
-    .then(book => {
-    book.name = newName;
-    return book.save();
-    })
-}
-
 module.exports = mongoose.model('Book', bookSchema);
