@@ -17,9 +17,11 @@ class BookList extends Component {
 
     if (data.loading) {
       return (
-        <div>Loading books...</div>
+        <div>
+          Loading books...
+        </div>
       );
-    } else {
+      } else {
 
     }
   }
@@ -29,7 +31,7 @@ class BookList extends Component {
     return (
       <div>
         <ul id="book-list">
-          <li>Book name</li>
+          {this.displayBooks()}
         </ul>
       </div>
     );
