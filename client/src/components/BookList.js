@@ -22,11 +22,11 @@ class BookList extends Component {
         </div>
       );
       } else {
-          return data.books.map(book => {
-            return (
-              <li key={book.id}>{book.name}</li>
-            );
-        });
+        return data.books.map(book => {
+          return (
+            <li key={book.id}>{book.name}</li>
+          );
+      });
     }
   }
 
