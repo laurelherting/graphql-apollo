@@ -19,7 +19,7 @@ From the `Client` folder, run: `yarn`
 Open up a tab in the terminal. From the `Client` project folder, run: `yarn start`
 
 ## Express-GraphQL Notes
-The GraphQL schema docs are located in: `server`
+The GraphQL schema docs are located in: `server/models`
 
 ## GraphiQL Notes
 - Open up a tab in the terminal and start MongoDB
@@ -30,7 +30,7 @@ An in-browser IDE for writing, validating, and testing queries
 [Getting started doc]:(https://www.apollographql.com/docs/apollo-server/v2/getting-started.html)
 
 ### Schema
-The Client side schema file is located at: `client/`
+The Client side schema file is located at: `client/src/components/BookList.js`
 
 ### Node
 .nvmrc added to both Server and Client side for node version consistency
