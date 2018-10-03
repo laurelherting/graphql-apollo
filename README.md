@@ -32,3 +32,5 @@ An in-browser IDE for writing, validating, and testing queries
 ### Schema
 The Client side schema file is located at: `client/`
 
+### Node
+.nvmrc added to both Server and Client side for node version consistency
