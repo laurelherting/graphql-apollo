@@ -35,5 +35,5 @@ The Client side schema file is located at: `client/src/components/BookList.js`
 ### Node
 .nvmrc added to both Server and Client side for node version consistency
 
-## Additional information
-The client-side was originally created without create-react-app (though was available at this time) and Relay. Relay was replaced with Apollo for its flexibility within the environment. A connection with MongoDB depicts this. After working with Apollo's more lighweight and flexible approach, a future application using Relay will be developed.
+#### Additional information
+The Client side was originally created without create-react-app (though was available at this time) and Relay. Relay was replaced with Apollo for its flexibility within the environment. A connection with MongoDB depicts this. After working with Apollo's more lightweight and flexible approach, a future application(requiring more complex data) will be developed using Relay.
