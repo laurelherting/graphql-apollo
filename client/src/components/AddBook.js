@@ -3,6 +3,14 @@ import { graphql } from 'react-apollo';
 import { getAuthorsQuery } from '../queries/queries';
 
 class AddBook extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      genre: '',
+      authorId: ''
+    };
+  }
   displayAuthors() {
     let data = this.props.data;
 
