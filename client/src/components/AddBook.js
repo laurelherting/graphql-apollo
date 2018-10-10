@@ -12,7 +12,6 @@ class AddBook extends Component {
     };
   }
   displayAuthors() {
-    console.log(this.props);
     let data = this.props.getAuthorsQuery;
     if (data.loading) {
       return (
@@ -28,8 +27,13 @@ class AddBook extends Component {
     }
     submitForm(e) {
       e.preventDefault()
-      console.log(this.state);
-      this.props.addBookMutation(); // adds book, but with no values
+      this.props.addBookMutation({
+        variables: {
+          name: this.state.name,
+          genre: this.state.genre,
+          authorId: this.state.authorId
+        }
+      });
     }
 
     render() {
