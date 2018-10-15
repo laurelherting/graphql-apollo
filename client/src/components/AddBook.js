@@ -52,7 +52,7 @@ class AddBook extends Component {
             <label>Author:</label>
             <select onChange={ (e) => this.setState({ authorId: e.target.value }) } >
               <option>Select author</option>
-              {this.displayAuthors()}
+              { this.displayAuthors() }
             </select>
           </div>
           <button>+</button>
