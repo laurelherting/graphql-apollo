@@ -3,9 +3,6 @@ module.exports = {
     "airbnb",
     "prettier",
   ],
-  "parser": [
-    "babel-eslint"
-  ],
   "parserOptions": {
     "ecmaVersion": 6
   },
