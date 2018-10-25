@@ -18,21 +18,23 @@
   "dependencies": {
     "cors": "2.8.4",
     "create-react-app": "^1.5.2",
-    "eslint": "2.9.0",
-    "eslint-config-airbnb": "^17.1.0",
     "express": "^4.16.3",
     "express-graphql": "^0.6.12",
     "graphql": "^0.13.2",
     "lodash": "^4.17.10",
     "minimist": "^1.2.0",
     "mongoose": "4.10.8",
-    "nodemon": "^1.18.3",
-    "prettier": "^1.13.7"
+    "nodemon": "^1.18.3"
   },
   "devDependencies": {
+    "prettier": "^1.13.7",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-react": "^7.11.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-prettier": "^3.0.0"
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1"
   }
 }

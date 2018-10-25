@@ -1,8 +1,14 @@
+// Do not remove react rules or portions. Dependencies for airbnb.
+// Required even though this is the server side setup
 module.exports = {
   "extends": [
     "airbnb",
     "prettier",
+    "prettier/react"
   ],
+  "env": {
+    "browser": true
+  },
   "parserOptions": {
     "ecmaVersion": 6
   },
@@ -14,6 +20,8 @@ module.exports = {
     "prettier"
   ],
   "rules": {
+    "react/no-string-refs": "off",
+    "react/no-unused-prop-types": "off",
     "import/no-unresolved": 0,
     "import/extensions": 0,
     "import/no-extraneous-dependencies": "off",
@@ -26,10 +34,20 @@ module.exports = {
         "trailingComma": "es5",
       }
     ],
+    "react/jsx-wrap-multilines": 0,
     "arrow-parens": [
       "error",
       "as-needed"
     ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ]
   },
   "globals": {
     "fetch": true
