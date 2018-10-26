@@ -6,20 +6,29 @@ import BookList from './components/BookList';
 import AddBook from './components/AddBook';
 
 const client = new ApolloClient({
-    uri: 'http://localhost:4000/graphql'
+  uri: 'http://localhost:4000/graphql',
 });
 
 class App extends Component {
   displayAuthors() {
-    let data = this.props.data;
-        if (data.loading) {
-            return( <option disabled>Loading authors</option> );
-        } else {
-            return data.authors.map(author => {
-                return( <option key={ author.id } value={author.id}>{ author.name }</option> );
-            });
-        }
+    const { data } = this.props;
+    if (data.loading) {
+      return (
+        <option
+          disabled>Loading authors
+        </option> );
+    } else {
+      return data.authors.map(author => {
+        return (
+          <option
+            key={author.id}
+            value={author.id}>{author.name}
+          </option>
+        );
+      });
     }
+  }
+
   render() {
     return (
       <ApolloProvider client={client}>
