@@ -17,16 +17,13 @@ class App extends Component {
         <option
           disabled>Loading authors
         </option> );
-    } else {
-      return data.authors.map(author => {
-        return (
-          <option
-            key={author.id}
-            value={author.id}>{author.name}
-          </option>
-        );
-      });
     }
+    return data.authors.map(author => {
+      <option
+        key={author.id}
+        value={author.id}>{author.name}
+      </option>;
+    });
   }
 
   render() {
