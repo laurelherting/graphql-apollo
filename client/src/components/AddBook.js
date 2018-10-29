@@ -8,17 +8,18 @@ class AddBook extends Component {
     this.state = {
       name: '',
       genre: '',
-      authorId: ''
+      authorId: '',
     };
   }
+
   displayAuthors() {
-    let data = this.props.getAuthorsQuery;
+    const data = this.props.getAuthorsQuery;
     if (data.loading) {
       return (
         <option disabled>Loading authors</option>
       );
-      } else {
-        return data.authors.map(author => {
+    } else {
+      return data.authors.map(author => {
           return (
             <option key={author.id} value={author.id}>{author.name}</option>
           );
@@ -62,6 +63,6 @@ class AddBook extends Component {
 }
 
 export default compose(
-  graphql(getAuthorsQuery, { name: "getAuthorsQuery" }),
-  graphql(addBookMutation, { name: "addBookMutation" })
+  graphql(getAuthorsQuery, { name: 'getAuthorsQuery' }),
+  graphql(addBookMutation, { name: 'addBookMutation' }),
 )(AddBook);
