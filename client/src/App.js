@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 
-import BookList from './components/BookList';
 import AddBook from './components/AddBook';
 
 const client = new ApolloClient({
@@ -16,7 +15,6 @@ class App extends Component {
       <ApolloProvider client={client}>
         <div id="Main">
           <h1>My Reading List</h1>
-          <BookList />
           <AddBook />
         </div>
       </ApolloProvider>
