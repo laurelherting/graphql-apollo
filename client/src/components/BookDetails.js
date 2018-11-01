@@ -4,7 +4,7 @@ import { getBookQuery } from '../queries/queries';
 
 class BookDetails extends Component {
   displayBookDetails() {
-    const { book } = this.props.data;
+    const { book } = this.props.item;
     if (book) {
       return (
         <div>
@@ -19,9 +19,8 @@ class BookDetails extends Component {
           </ul>
         </div>
       );
-    } else {
-      return <div>No book selected...</div>;
     }
+    return <div>No book selected...</div>;
   }
 
   render() {
@@ -30,11 +29,9 @@ class BookDetails extends Component {
 }
 
 export default graphql(getBookQuery, {
-  options: props => {
-    return {
-      variables: {
-        id: props.bookId,
-      },
-    };
-  },
+  options: props => ({
+    variables: {
+      id: props.bookId,
+    },
+  }),
 })(BookDetails);
