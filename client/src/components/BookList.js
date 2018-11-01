@@ -17,17 +17,16 @@ class BookList extends Component {
     const { data } = this.props;
 
     if (data.loading) {
-      return (
-        <div>
-          Loading books...
-        </div>
-      );
+      return <div>Loading books...</div>;
     } else {
-    return data.books.map(book => {
-    return (
-      <li key={book.id} onClick={ (e) =>
-        this.set.state({ selected: book.id }) }>{ book.name }</li>
-      );
+      return data.books.map(book => {
+        return (
+          <li
+            key={book.id}
+            onClick={e => this.set.state({ selected: book.id })}>
+            {book.name}
+          </li>
+        );
       });
     }
   }
@@ -35,10 +34,8 @@ class BookList extends Component {
   render() {
     return (
       <div>
-        <ul id="book-list">
-          {this.displayBooks()}
-        </ul>
-        <BookDetails bookId={ this.state.selected }/>
+        <ul id="book-list">{this.displayBooks()}</ul>
+        <BookDetails bookId={this.state.selected} />
       </div>
     );
   }
