@@ -8,6 +8,14 @@ Server and Client side have separate `package.json` and `yarn.lock` files
 From the root project folder, run `yarn`
 
 ### Server: Running the project
+The credentials for mlab.com must be exported as shell environment variables.
+```console
+$ export MLAB_USERNAME=''
+$ export MLAB_PASSWORD=''
+```
+This must be done every time a new terminal window is opened and used for the
+server side.
+
 - Open up a tab in the terminal and start MongoDB
 - Open up a tab in the terminal. From the root project folder, run: `yarn start`
 
