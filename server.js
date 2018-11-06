@@ -11,7 +11,9 @@ app.use(cors());
 
 // connect to mlab
 mongoose.connect(
-  'mongodb://author:12ddyy94@ds231991.mlab.com:31991/relay_work'
+  `mongodb://${process.env.MLAB_USERNAME}:${
+    process.env.MLAB_PASSWORD
+  }@ds231991.mlab.com:31991/relay_work`
 );
 mongoose.connection.once('open', () => {
   console.log('connected to database');
