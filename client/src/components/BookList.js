@@ -6,12 +6,17 @@ import { getBooksQuery } from '../queries/queries';
 import BookDetails from './BookDetails';
 
 class BookList extends Component {
+  displayBooks() {
+    const { data } = this.props;
+    if (data.loading) {
+      return <div>Loading Books...</div>;
+    }
+  }
+
   render() {
     return (
       <div>
-        <ul id="book-list">
-          <li>Book name</li>
-        </ul>
+        <ul id="book-list" />
         <BookDetails />
       </div>
     );
