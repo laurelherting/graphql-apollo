@@ -10,6 +10,10 @@ class BookList extends Component {
     const { data } = this.props;
     if (data.loading) {
       return <div>Loading Books...</div>;
+    } else {
+      return data.books.map(book => {
+        return <li>{book.name}</li>;
+      });
     }
   }
 
