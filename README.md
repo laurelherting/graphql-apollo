@@ -19,6 +19,23 @@ server side.
 - Open up a tab in the terminal and start MongoDB
 - Open up a tab in the terminal. From the root project folder, run: `yarn start`
 
+### Server: Debugging
+Requires the [Node.js V8 inspector extension](https://chrome.google.com/webstore/detail/nodejs-v8-inspector-manag/gnhhdgbaldcilmgcpfddgdbkhjohddkj?hl=en)
+
+To debug the server enter a `debugging` line in the server codebase.
+
+Example: `./server/schema/schema.js`
+```javascript
+resolve(parent, args) {
+  debugger;
+  return Book.findById(args.id);
+},
+```
+
+Then run `yarn run debug` to run the server in debug mode. Open Chrome and the
+inspector (dev tools). Click the green Node.js V8 inspector extension icon. Use
+breakpoints as necessary to move through the code and inspect.
+
 ### Client: Install
 From the `Client` folder, run: `yarn`
 
